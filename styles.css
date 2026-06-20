@@ -297,8 +297,6 @@ section { position: relative; }
 /* Contact CTA (mailto) */
 .contact-cta { position: relative; display: flex; flex-direction: column; align-items: flex-start; }
 .contact-mail-btn { margin-top: 36px; text-decoration: none; }
-.contact-mail-addr { margin-top: 18px; color: rgba(255,255,255,.7); font-size: .95rem; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.25); padding-bottom: 2px; transition: color .15s, border-color .15s; }
-.contact-mail-addr:hover { color: #fff; border-color: rgba(255,255,255,.6); }
 /* Message char counter */
 .cf-message-wrap { position: relative; width: 100%; }
 .cf-message-wrap .cf-field { padding-bottom: 32px; }
@@ -353,6 +351,7 @@ section { position: relative; }
   .feat-grid { grid-template-columns: 1fr; }
   .stats { grid-template-columns: 1fr; }
   .stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,.14); padding: 28px 0; }
+  .stat + .stat { padding-left: 0; }
   .stat:last-child { border-bottom: none; }
   .nav-links { display: none; }
 }
@@ -364,4 +363,6 @@ section { position: relative; }
 @media (max-width: 560px) {
   .wrap { padding: 0 20px; }
   .site { font-size: 17px; }
+  /* Phone is a fixed 290px — scale it to fit narrow viewports so it never clips */
+  .phone { width: min(290px, 78vw); height: auto; aspect-ratio: 29 / 60; padding: clamp(9px, 3.2vw, 13px); }
 }

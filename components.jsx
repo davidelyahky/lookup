@@ -265,7 +265,6 @@ function Contact({ formRef }) {
             <h2>Get in touch.</h2>
             <p className="lead">Questions, partnerships, or just want to say hi?<br />Send us an email and we'll write back.</p>
             <a className="btn btn-primary contact-mail-btn" href={href}>Email us</a>
-            <a className="contact-mail-addr mono" href={href}>{recipient}</a>
             <div className="wl-fine">We read everything. No auto-replies, no spam.</div>
           </div>
         </Reveal>
